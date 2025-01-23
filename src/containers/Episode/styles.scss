@@ -1,0 +1,44 @@
+
+section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    .Episode {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding-left: 20px;
+        
+      
+        .Product {
+          width: 400px;
+          display: flex;
+
+          .Image{
+            width: 250px;
+          }
+
+          .NameEp {
+             padding-left: 20px;
+            h5{
+                font-size: 19px;
+                color: #e67e22;
+            }
+
+            p{
+                font-weight: bolder;
+                color: #2ecc71;
+                font-size: 18px;
+            }
+
+            .EP{
+              padding-top: 20px;
+              p{
+               
+                color: #95a5a6;
+              }
+            }
+          }
+        }
+      }
+      
+}

@@ -1,0 +1,26 @@
+section{
+    .Character{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        .nicks{
+         
+         
+            h1{
+                color: #e67e22;
+            }
+
+            p {
+                font-weight: bolder;
+               color: #2ecc71;
+               padding-top: 10px;
+
+               span{
+                color: #e67e22;
+               }
+            }
+        }
+    }
+}

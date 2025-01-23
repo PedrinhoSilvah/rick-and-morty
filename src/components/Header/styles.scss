@@ -1,0 +1,30 @@
+Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  border-bottom: 1px solid  rgba(230, 126, 34, 0.4); 
+  ;
+
+  .Name {
+    padding-left: 20px;
+  }
+
+  .Navigation {
+    display: flex;
+    padding-right: 20px;
+    font-size: 25px;
+
+    .Link {
+        text-decoration: none;
+        color: azure;
+        padding: 0 40px;
+        font-weight: bolder;
+
+        &:hover {
+          color: #e67e22;
+        }
+    }
+    
+  }
+}
