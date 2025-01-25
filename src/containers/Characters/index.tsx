@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import "./styles.scss";
+import Footer from "components/Footer";
 
 const Characters = () => {
   const [character, SetCharacter] = useState(null);
@@ -47,6 +48,7 @@ const Characters = () => {
             : "Carregando..."}
         </div>
       </section>
+      <Footer />
     </>
   );
 };

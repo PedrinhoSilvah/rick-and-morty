@@ -5,8 +5,16 @@ section{
         gap: 20px;
         justify-content: center;
 
+        img{
+            @media (max-width: 768px){
+                width: 250px;
+            }
+        }
+
         .nicks{
-         
+           width: 300px;
+
+        
          
             h1{
                 color: #e67e22;

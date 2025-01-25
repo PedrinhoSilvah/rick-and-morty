@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import "./styles.scss";
 import { images } from "../../img/image";
+import Button from "components/Buttons";
+import Footer from "components/Footer";
 
 const Episode = () => {
   const [Ep, SetEp] = useState(null);
@@ -27,7 +29,7 @@ const Episode = () => {
                 <div key={index} className="Product">
                   <img className="Image" src={images[index]} alt="" />
                   <div className="NameEp">
-                    <div>
+                    <div className="NicksNames">
                       <h5>Episode Name:</h5>
                       <p>{E.name}</p>
                     </div>
@@ -35,12 +37,14 @@ const Episode = () => {
                       <p>{E.episode}</p>
                     </div>
                     {E.count}
+                    <Button name="Assistir" Link="https://www.justwatch.com/br/serie/rick-and-morty" />
                   </div>
                 </div>
               ))
             : "Carregando..."}
         </div>
       </section>
+     <Footer />
     </>
   );
 };
