@@ -1,18 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./containers/Home";
-import Characters from "./containers/Characters";
-import Episode from "./containers/Episode";
+import AppRoutes from "router/routes";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Characters" element={<Characters />} />
-        <Route path="/Episode" element={<Episode />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

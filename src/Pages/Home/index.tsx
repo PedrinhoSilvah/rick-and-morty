@@ -2,6 +2,24 @@ import Footer from "components/Footer";
 import Header from "../../components/Header";
 import "./styles.scss";
 
+interface Character {
+  id: number;
+  name: string;
+  species: string;
+  gender: string;
+  status: string;
+  image: string;
+  episode: string;
+  count: string;
+  origin: {
+    name: string;
+  };
+}
+
+export interface ApiResponse {
+  results: Character[];
+}
+
 const Home = () => (
   <>
     <Header />

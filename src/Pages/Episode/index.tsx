@@ -1,31 +1,20 @@
-import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import "./styles.scss";
 import { images } from "../../img/image";
 import Button from "components/Buttons";
 import Footer from "components/Footer";
+import { useGetEpisodeQuery } from "services/Api";
 
 const Episode = () => {
-  const [Ep, SetEp] = useState(null);
-
-  useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/episode")
-      .then((response) => response.json())
-      .then((data) => {
-        SetEp(data.results);
-      })
-      .catch((error) => {
-        console.error("Erro ao buscar dados:", error);
-      });
-  }, []);
+  const { data: Ep } = useGetEpisodeQuery();
 
   return (
     <>
       <Header />
       <section>
         <div className="Episode">
-          {Ep
-            ? Ep.map((E, index) => (
+          {Ep?.results
+            ? Ep.results.map((E, index) => (
                 <div key={index} className="Product">
                   <img className="Image" src={images[index]} alt="" />
                   <div className="NameEp">
@@ -36,15 +25,18 @@ const Episode = () => {
                     <div className="EP">
                       <p>{E.episode}</p>
                     </div>
-                    {E.count}
-                    <Button name="Assistir" Link="https://www.justwatch.com/br/serie/rick-and-morty" />
+                    <p>{E.count}</p>
+                    <Button
+                      name="Assistir"
+                      Link="https://www.justwatch.com/br/serie/rick-and-morty"
+                    />
                   </div>
                 </div>
               ))
             : "Carregando..."}
         </div>
       </section>
-     <Footer />
+      <Footer />
     </>
   );
 };
